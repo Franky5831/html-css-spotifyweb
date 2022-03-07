@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+aside, header, main, footer{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
 
 
 
@@ -13,11 +17,10 @@ aside{
     width: 250px;
     background-color: #000000;
     padding-top: 20px;
-    padding-left: 20px;
 }
 aside img{
     width: 150px;
-
+    padding-left: 20px;
 }
 aside a{
     margin-bottom: 900px;
@@ -30,21 +33,55 @@ aside li{
     display: block;
     color: white;
     list-style: none;
-    font-size: 30px;
+    font-size: 20px;
 }
-
-
-
-
-
-
-
-
-
-header, main, footer{
+aside li a{
+    color: #a3a3a3;
+    text-decoration: none;
+    padding-left: 20px;
+}
+aside li a:hover{
+    padding-left: 17px;
+    border-left: 3px solid #adff2f;
     color: white;
-    font-family: 'Montserrat', sans-serif;
 }
+aside>section{
+    padding-left: 20px;
+}
+aside>section>div>i{
+    font-size: 40px;
+}
+aside>section>div{
+    display: flex;
+    align-items: center;
+}
+section>div:first-child{
+    padding-top: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bolder;
+}
+aside div>svg{
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    border-radius: 50%;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 header{
     position: fixed;
     z-index: 100;
@@ -96,12 +133,21 @@ main{
     background-color: #141922;
 }
 #container-main{
-
-
+    height: calc(100vh - 120px);
+    padding-top: 120px;
+    padding-left: 250px;
 }
 
-
-
+#buttons{
+    display: flex;
+    justify-content: center;
+}
+#buttons a{
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 
 
 
