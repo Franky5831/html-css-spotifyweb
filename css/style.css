@@ -67,6 +67,7 @@ aside>section>:first-child{
     bottom: 10px;
     width: 100%;
     padding: 0 20px;
+    background-color: #000000;
 }
 #dw hr{
     margin: 10px 0;
@@ -146,16 +147,23 @@ header a{
 
 
 main{
-    height: 100vh;
     width: 100%;
     background-color: #141922;
 }
+main>#container-main>section>h1:first-child{
+    margin-left: 3%;
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+#creato-per, #artisti{
+    margin-top: 50px;
+}
 #container-main{
-    height: calc(100vh - 120px);
     padding-top: 120px;
+    padding-bottom: 120px;
     padding-left: 250px;
 }
-
 #buttonscont{
     display: flex;
     justify-content: center;
@@ -180,8 +188,18 @@ main{
 
 #recently-section{
     width: 100%;
-    height: 300px;
-    background-color: red;
+}
+#recently-section h1, #creato-per h1, #artisti h1{
+    padding: 10px 0 5px 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+}
+#recently-section h2, #creato-per h2, #artisti h2{
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #7d7f84;
 }
 main h1{
     width: 100%;
@@ -198,34 +216,47 @@ main h1{
 .album-cover{
     display: inline-block;
     width: 90%;
+    margin: 5%;
     height: 100%;
-    background-color: green;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+
 }
-.album-cover1{
-    padding-top: 0;
-    background-image: url(../jojo-covers/d4c.jpg);
-}
-.album-cover2{
-    background-image: url(../jojo-covers/holy-diver.png);
-}
-.album-cover3{
-    background-image: url(../jojo-covers/killer-queen.jpg);
-}
-.album-cover4{
-    background-image: url(../jojo-covers/king\ crimson.jpg);
-}
-.album-cover5{
-    background-image: url(../jojo-covers/kiss.jpg);
-}
-.album-cover6{
-    background-image: url(../jojo-covers/thusk.jpg);
+.album-cover img{
+    width: 100%;
 }
 
 
 
+.creato-box{
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+}
+.creato-box-playlist{
+    display: inline-block;
+    width: 90%;
+    margin: 5%;
+    height: 100%;
+}
+.creato-box-playlist img{
+    width: 100%;
+}
+
+
+.artisti-box{
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+}
+.artisti-box-image{
+    display: inline-block;
+    width: 90%;
+    margin: 5%;
+    height: 100%;
+}
+.artisti-box-image img{
+    width: 100%;
+    border-radius: 100%;
+}
 
 
 
@@ -248,6 +279,9 @@ main h1{
 
 footer{
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     z-index: 400;
     height: 120px;
     width: 100%;
@@ -260,9 +294,101 @@ footer #now-playing{
     align-items: center;
     padding-left: 10px;
 }
-footer h2, footer, h3{
+footer #now-playing section i{
+    margin: 0 5px;
+    color: #7e7e7e;
+}
+footer h2, footer h3{
     display: block;
+}
+footer h2{
+    font-size: 17px;
+    margin-right: 20px;
+}
+footer h3{
+    font-size: 15px;
+    color: #979797;
 }
 footer img{
     width: 50px;
+}
+#bar{
+    width: 40%;
+}
+footer #bar i{
+    color: white;
+    font-size: 20px;
+    margin: 0 20px;
+}
+footer .controls, footer .progress-bar-box1{
+    display: flex;
+    justify-content: center;
+}
+footer .progress-bar-box1{
+    display: flex;
+    align-items: center;
+}
+footer .progress-bar-box1 h4{
+    margin: 0 20px;
+}
+footer .progress-bar-back1{
+    background-color: #343434;
+    border-radius: 2px;
+    height: 4px;
+    width: calc(100% + 600px);
+}
+footer .progress-bar-front1{
+    width: 30%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: #7e7e7e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer .controls, footer #audio{
+    display: flex;
+    justify-content: center;
+}
+footer #audio{
+    display: flex;
+    align-items: center;
+}
+footer #audio i{
+    margin: 0 10px;
+}
+
+footer .progress-bar-back2{
+    margin: 0 10px;
+    background-color: #343434;
+    border-radius: 2px;
+    height: 4px;
+    width: 150px;
+}
+footer .progress-bar-front2{
+    width: 90%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: #7e7e7e;
 }

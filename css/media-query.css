@@ -1,0 +1,11 @@
+@media screen and (max-width: 1500px) {
+    .album-cover6{
+        display: none;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .album-cover5{
+        display: none;
+    }
+}
+
