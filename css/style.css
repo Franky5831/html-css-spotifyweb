@@ -257,6 +257,7 @@ main h1{
     width: 100%;
     border-radius: 100%;
 }
+/*
 ins{
     display: none;
     position: relative;
@@ -278,7 +279,7 @@ main img:hover{
 }
 main img:hover ~ ins{
     display: inline;
-}
+}*/
 
 
 
@@ -286,14 +287,36 @@ main img:hover ~ ins{
 
 
 
+/*
 img:hover::after{
     content: "⏵";
     width: 100px;
     height: 100px;
     background-color: #adff2f;
 }
+*/
 
 
+
+
+
+
+
+
+
+
+
+
+.img-container>ins{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50, -50);
+    font-size: 40px;
+    padding: 5px 13px;
+    border-radius: 50%;
+    background-color: green;
+}
 
 
 
