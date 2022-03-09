@@ -257,84 +257,11 @@ main h1{
     width: 100%;
     border-radius: 100%;
 }
-/*
-ins{
-    display: none;
-    position: relative;
-    left: 90%;
-    bottom: 10%;
-    font-size: 40px;
-    padding: 5px 13px;
-    border-radius: 50%;
-    background-color: green;
-}
-main img{
-    opacity: 1;
-    border-radius: 0;
-}
-main img:hover{
+main img:hover:not(#third-row-items img){
     animation-name: image-hover;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
-main img:hover ~ ins{
-    display: inline;
-}*/
-
-
-
-
-
-
-
-/*
-img:hover::after{
-    content: "⏵";
-    width: 100px;
-    height: 100px;
-    background-color: #adff2f;
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-.img-container>ins{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50, -50);
-    font-size: 40px;
-    padding: 5px 13px;
-    border-radius: 50%;
-    background-color: green;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @keyframes image-hover {
     from{
         opacity: 1;
@@ -342,11 +269,134 @@ img:hover::after{
         border-radius: 0;
     }
     to{
-        opacity: 0.3;
+        opacity: 0.5;
         background-color: black;
         border-radius: 5px;
     }
 }
+.img-container{
+    position: relative;
+}
+ins{
+    z-index: 600;
+}
+
+/*first row*/
+#first-row-items .img-container>ins{
+    position: absolute;
+    display: none;
+    top: 85%;
+    left: 90%;
+    font-size: 40px;
+    padding: 5px 14px;
+    border-radius: 50%;
+    background-color: rgb(13, 194, 13);
+}
+#first-row-items img:hover ~ ins{
+    display: block;
+    animation-name: ins-hover1;
+    animation-duration: 1s;
+}
+@keyframes ins-hover1 {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/*second row*/
+#second-row-items .img-container>ins{
+    position: absolute;
+    display: none;
+    top: 85%;
+    left: 90%;
+    font-size: 30px;
+    padding: 12px 18px;
+    border-radius: 50%;
+    background-color: orange;
+}
+#second-row-items img:hover ~ ins{
+    display: block;
+    animation-name: ins-hover2;
+    animation-duration: 1s;
+}
+@keyframes ins-hover2 {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/*third row*/
+#third-row-items img:hover{
+    animation-name: image-author-hover;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#third-row-items .img-container>ins{
+    position: absolute;
+    display: none;
+    top: 85%;
+    left: 90%;
+    font-size: 30px;
+    padding: 12px 14px;
+    border-radius: 50%;
+    background-color: blue;
+}
+#third-row-items img:hover ~ ins{
+    display: block;
+    animation-name: ins-hover3;
+    animation-duration: 1s;
+}
+@keyframes ins-hover3 {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes image-author-hover {
+    from{
+        opacity: 1;
+        background-color: #141922;
+        border-radius: 50%;
+    }
+    to{
+        opacity: 0.5;
+        background-color: black;
+        border-radius: 30px;
+    }
+}
+
+
+
+
+
+
+ins:hover{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
