@@ -257,10 +257,73 @@ main h1{
     width: 100%;
     border-radius: 100%;
 }
+ins{
+    display: none;
+    position: relative;
+    left: 90%;
+    bottom: 10%;
+    font-size: 40px;
+    padding: 5px 13px;
+    border-radius: 50%;
+    background-color: green;
+}
+main img{
+    opacity: 1;
+    border-radius: 0;
+}
+main img:hover{
+    animation-name: image-hover;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+main img:hover ~ ins{
+    display: inline;
+}
 
 
 
 
+
+
+
+img:hover::after{
+    content: "⏵";
+    width: 100px;
+    height: 100px;
+    background-color: #adff2f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes image-hover {
+    from{
+        opacity: 1;
+        background-color: #141922;
+        border-radius: 0;
+    }
+    to{
+        opacity: 0.3;
+        background-color: black;
+        border-radius: 5px;
+    }
+}
 
 
 
