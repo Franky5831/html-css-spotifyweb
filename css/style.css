@@ -488,7 +488,6 @@ footer #now-playing{
     display: flex;
     align-items: center;
     padding-left: 10px;
-    background-color: red;
     width: 25%;
 }
 footer #now-playing section i{
