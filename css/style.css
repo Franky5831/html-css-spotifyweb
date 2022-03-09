@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header, main, footer{
+    min-width: 705px;
+}
+
 aside, header, main, footer{
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -43,17 +48,17 @@ aside li a:hover{
     border-left: 3px solid #adff2f;
     color: white;
 }
-aside>section{
+aside #aside-v1>section{
     padding-left: 20px;
 }
-aside>section>div>i{
+aside #aside-v1>section>div>i{
     font-size: 40px;
 }
-aside>section>div{
+aside #aside-v1>section>div{
     display: flex;
     align-items: center;
 }
-aside>section>:first-child{
+aside #aside-v1>section>:first-child{
     padding-top: 20px;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -87,6 +92,81 @@ aside div a{
     text-decoration: none;
     font-size: 18px;
 }
+#nome-playlist-list{
+    height: calc((100vh /4) + 80px);
+    overflow: auto;
+    margin-bottom: 2100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#aside-v2{
+    display: none;
+    height: 100%;
+}
+#aside-v2 img{
+    position: relative;
+    padding: 0;
+    left: 10px;
+    width: 60px;
+}
+#aside-v2 li{
+    font-size: 40px;
+}
+#aside-v2 svg{
+    height: 60px;
+    width: 60px;
+    margin-left: 10px;
+    background-color: gray;
+    border-radius: 50%;
+}
+#aside-v2 ul:last-child{
+    position: absolute;
+    bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -145,6 +225,7 @@ header a{
 
 
 main{
+    overflow: auto;
     width: 100%;
     background-color: #141922;
 }
@@ -165,6 +246,7 @@ main>#container-main>section>h1:first-child{
 #buttonscont{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 #buttonscont a{
     position: relative;
@@ -183,6 +265,12 @@ main>#container-main>section>h1:first-child{
     top: 24px;
     left: calc((100% - 30px) / 2);
 }
+#burgerbutton{
+    display: none;
+    top: 20px;
+    font-size: 60px;
+}
+
 
 #recently-section{
     width: 100%;
@@ -206,10 +294,9 @@ main h1{
     display: flex;
     justify-content: space-around;
 }
-.recently-album{
+.album-size{
     display: inline-block;
-    width: 300px;
-    height: 300px;
+    width: calc((100% / 6));
 }
 .album-cover{
     display: inline-block;
@@ -222,9 +309,7 @@ main h1{
     width: 100%;
 }
 
-#first-row-items, #second-row-items, #third-row-items{
-    min-width: 890px;
-}
+
 
 .creato-box{
     display: inline-block;
@@ -292,7 +377,7 @@ ins{
     border-radius: 50%;
     background-color: rgb(13, 194, 13);
 }
-#first-row-items img:hover ~ ins{
+#first-row-items .img-container:hover ins{
     display: block;
     animation-name: ins-hover1;
     animation-duration: 1s;
@@ -316,7 +401,7 @@ ins{
     border-radius: 50%;
     background-color: orange;
 }
-#second-row-items img:hover ~ ins{
+#second-row-items .img-container:hover ins{
     display: block;
     animation-name: ins-hover2;
     animation-duration: 1s;
@@ -345,7 +430,7 @@ ins{
     border-radius: 50%;
     background-color: blue;
 }
-#third-row-items img:hover ~ ins{
+#third-row-items .img-container:hover ins{
     display: block;
     animation-name: ins-hover3;
     animation-duration: 1s;
@@ -376,32 +461,6 @@ ins{
 
 
 
-ins:hover{
-    display: block;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -418,7 +477,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 400;
+    z-index: 1000;
     height: 120px;
     width: 100%;
     background-color: #282828;
@@ -429,12 +488,18 @@ footer #now-playing{
     display: flex;
     align-items: center;
     padding-left: 10px;
+    background-color: red;
+    width: 25%;
 }
 footer #now-playing section i{
     margin: 0 5px;
     color: #7e7e7e;
 }
 footer h2, footer h3{
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     display: block;
 }
 footer h2{
@@ -460,6 +525,22 @@ footer .controls, footer .progress-bar-box1{
     display: flex;
     justify-content: center;
 }
+footer .progress-bar-dot1{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    bottom: -5px;
+    left: calc(30% - 5px);
+    opacity: 0;
+}
+.progress-bar-back1:hover .progress-bar-dot1{
+    opacity: 1;
+}
+.progress-bar-back1:hover .progress-bar-front1{
+    background-color: #adff2f;
+}
 footer .progress-bar-box1{
     display: flex;
     align-items: center;
@@ -468,6 +549,7 @@ footer .progress-bar-box1 h4{
     margin: 0 20px;
 }
 footer .progress-bar-back1{
+    position: relative;
     background-color: #343434;
     border-radius: 2px;
     height: 4px;
@@ -510,21 +592,45 @@ footer .controls, footer #audio{
 footer #audio{
     display: flex;
     align-items: center;
+    width: 20%;
 }
 footer #audio i{
     margin: 0 10px;
 }
 
 footer .progress-bar-back2{
+    position: relative;
     margin: 0 10px;
     background-color: #343434;
     border-radius: 2px;
     height: 4px;
-    width: 150px;
+    width: 50%;
 }
 footer .progress-bar-front2{
     width: 90%;
     height: 100%;
     border-radius: 2px;
     background-color: #7e7e7e;
+}
+
+
+
+
+
+
+footer .progress-bar-dot2{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    bottom: -5px;
+    left: calc(90% - 5px);
+    opacity: 0;
+}
+.progress-bar-back2:hover .progress-bar-dot2{
+    opacity: 1;
+}
+.progress-bar-back2:hover .progress-bar-front2{
+    background-color: #adff2f;
 }
