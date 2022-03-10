@@ -34,6 +34,11 @@
         display: none;
     }
 
+
+
+    #container-main{
+        padding-left: 80px;
+    }
     aside{
         width: 80px;
     }
@@ -43,12 +48,7 @@
     #aside-v2{
         display: flex;
     }
-
-    header, main, footer{
-        padding: 0;
-    }
 }
-
 
 @media screen and (max-width: 800px) {
     #audio i:nth-child(2), #audio i:nth-child(1){
