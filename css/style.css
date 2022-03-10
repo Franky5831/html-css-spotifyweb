@@ -516,6 +516,12 @@ footer img{
 #bar{
     width: 40%;
 }
+.controls{
+    margin-bottom: 10px;
+}
+.progress-bar-box1{
+    margin-top: 10px;
+}
 footer #bar i{
     color: white;
     font-size: 20px;
