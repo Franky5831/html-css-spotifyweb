@@ -48,6 +48,9 @@
     #aside-v2{
         display: flex;
     }
+    header, main, footer{
+        padding-left: 80px;
+    }
 }
 
 @media screen and (max-width: 800px) {
