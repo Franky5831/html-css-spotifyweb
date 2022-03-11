@@ -38,14 +38,17 @@
         width: 80px;
     }
     #aside-v1{
-        display: none;
+        display: inline;
     }
     #aside-v2{
-        display: flex;
+        display: inline;
     }
 
     header, main, footer{
-        padding: 0;
+        padding: 80px;
+    }
+    header, main, footer{
+        background-color: red;
     }
 }
 
