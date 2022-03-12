@@ -509,6 +509,14 @@ ins{
     animation-name: ins-hover3;
     animation-duration: 1s;
 }
+#third-row-items{
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.product-size{
+    width: 800px;
+}
+
 @keyframes ins-hover3 {
     from{
         opacity: 0;
