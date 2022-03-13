@@ -396,6 +396,10 @@ main h1{
     display: inline-block;
     width: calc((100% / 6));
 }
+.product-size{
+    display: inline-block;
+    width: calc((100% / 6));
+}
 .album-cover{
     display: inline-block;
     width: 90%;
@@ -509,9 +513,15 @@ ins{
     animation-name: ins-hover3;
     animation-duration: 1s;
 }
+#products-row{
+    display: flex;
+    width: 150%;
+}
 #third-row-items{
     overflow-x: scroll;
     overflow-y: hidden;
+    margin-right: 30px;
+    margin-top: 30px;
 }
 .product-size{
     width: 800px;
@@ -552,9 +562,9 @@ ins{
     border-bottom-right-radius: 50px;
     background-image: linear-gradient(180deg, #141922, #0B1913);
     width: 100%;
-    height: 500px;
     overflow-x: auto;
     margin-bottom: 200px;
+    overflow-y: hidden;
 }
 #lista-negozio h1{
     text-align: center;
@@ -586,3 +596,73 @@ ins{
 
 
 
+
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 20px black; 
+    border-radius: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #adff2f; 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #619b0a; 
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.img-container>img{
+    animation-fill-mode: forwards;
+    animation-name: product-hover;
+    animation-duration: 2s;
+}
+
+@keyframes product-hover {
+    from{
+        border-radius: 0;
+    }
+    to{
+        border-radius: 20px;
+    }
+}
