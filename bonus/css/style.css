@@ -493,11 +493,7 @@ ins{
     }
 }
 /*third row*/
-#third-row-items img:hover{
-    animation-name: image-author-hover;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
+
 #third-row-items .img-container>ins{
     position: absolute;
     display: none;
@@ -650,12 +646,14 @@ ins{
 
 
 
-
-
 .img-container>img{
+    z-index: 599;
+}
+
+.img-container>img:hover{
     animation-fill-mode: forwards;
     animation-name: product-hover;
-    animation-duration: 2s;
+    animation-duration: 1s;
 }
 
 @keyframes product-hover {
@@ -663,6 +661,6 @@ ins{
         border-radius: 0;
     }
     to{
-        border-radius: 20px;
+        border-radius: 15px;
     }
 }
