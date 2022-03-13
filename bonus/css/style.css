@@ -206,6 +206,7 @@ body{
     background-position: top;
     background-attachment: fixed;
     background-size: cover;
+    overflow: overlay
 }
 header{
     width: 100%;
