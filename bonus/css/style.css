@@ -586,66 +586,6 @@ ins{
     overflow-x: auto;
     word-break: break-all;
 }
-
-
-
-
-
-
-
-
-::-webkit-scrollbar {
-    width: 15px;
-    height: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 20px black; 
-    border-radius: 10px;
-  }
-   
-  ::-webkit-scrollbar-thumb {
-    background: #adff2f; 
-    border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #619b0a; 
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .img-container>img{
     z-index: 599;
 }
@@ -664,3 +604,10 @@ ins{
         border-radius: 15px;
     }
 }
+
+
+
+
+
+
+

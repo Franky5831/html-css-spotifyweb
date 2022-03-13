@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    overflow: overlay
+}
 
 header, main, footer{
     min-width: 705px;
@@ -642,3 +645,20 @@ footer .progress-bar-dot2{
 .progress-bar-back2:hover .progress-bar-front2{
     background-color: #adff2f;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
