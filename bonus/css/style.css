@@ -204,6 +204,7 @@ header, main, footer{
     padding-left: 250px;
 }
 body{
+    counter-reset: section;
     background-image: url(../../jojo-covers/jojo-wallpaper.jpg);
     background-repeat: no-repeat;
     background-position: top;
@@ -299,11 +300,18 @@ ol li{
 }
 ol li img{
     width: 40px;
-    margin-left: 10px;
+    margin-left: 25px;
 }
 ol li h3{
     font-size: 16px;
     color: lightgray;
+}
+ol li::before{
+    counter-increment: section;
+    content: counter(section) ".";
+    position: absolute;
+    margin-left: -5px;
+    font-weight: bold;
 }
 
 ol li div{
@@ -613,13 +621,6 @@ ins{
 
 
 
-
-
-
-
-ol{
-    list-style-type: circle;
-}
 
 
 
