@@ -448,7 +448,7 @@ main h1{
     width: 100%;
     border-radius: 100%;
 }
-main img:hover:not(#third-row-items img){
+main img:hover:not(#third-row-items img):not(#container-popolari img){
     animation-name: image-hover;
     animation-duration: 2s;
     animation-fill-mode: forwards;
